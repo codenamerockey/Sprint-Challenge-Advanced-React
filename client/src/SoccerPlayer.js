@@ -7,7 +7,11 @@ function SoccerPlayer({ players }) {
   const [playerLastname, setPlayerLastname] = UserInput('lastname', '');
 
   const soccerPlayer = players.map(player => {
-    return <PlayerCard soccer={player} key={player.id} />;
+    return (
+      <div>
+        <PlayerCard soccer={player} key={player.id} />
+      </div>
+    );
   });
 
   const formOnSubmitChange = e => {
@@ -17,6 +21,7 @@ function SoccerPlayer({ players }) {
   return (
     <>
       <form onSubmit={formOnSubmitChange}>
+        <h1>Name you favorite player</h1>
         {/* Wires up the input fields and the state object with the onChange eventListener, that takes the value from the input field on every key stroke */}
         <input
           placeholder="Players Firstname"
@@ -30,7 +35,8 @@ function SoccerPlayer({ players }) {
           onChange={e => setPlayerLastname(e.target.value)}
         />
         <button>Click Here</button>
-      </form>
+      </form>{' '}
+      <br />
       {soccerPlayer}
     </>
   );

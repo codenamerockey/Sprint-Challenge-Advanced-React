@@ -38,4 +38,23 @@
   border: 1px solid orangered;
   padding: 20px;
   margin: 20px;
+  box-shadow: 5px 5px 5px #888;
 }
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+
+form {
+  display: inline-block;
+  margin: 0 auto;
+
+}
+
+/* #root>div>div:nth-child(4) {
+  margin-top: 40px;
+} */
